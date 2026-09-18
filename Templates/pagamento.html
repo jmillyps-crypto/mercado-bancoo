@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Finalize sua compra</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="assets/img/Logo.png" alt="logo" class="img-logo">
+    </div>
+    <div class="todo">
+        <div class="infos">
+            <h4>Finalize sua Compra</h4>
+            <div class="produto">
+
+                <img src="img/imgdotop.jpg" alt="imagem_do_produto" id="top">
+                <div class="info">
+                    <h5>Top Lupo Loba Fitness Confortável Ótima Sustentação Academia</h5>
+                    <p>Cor: Preto - Tamanho: M</p>
+                </div>
+            </div>
+            <div class="pagar">
+                <div class="juntinho">
+                <h5>Formas de Entrega</h5>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Codigo</th>
+                                <th>Rua</th>
+                                <th>Numero</th>
+                                <th>CEP</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for endereco in enderecos %}
+                            <tr>
+                                <td>{{ endereco[0] }}</td>
+                                <td>{{ endereco[1] }}</td>
+                                <td>{{ endereco[2] }}</td>
+                                <td>{{ endereco[3] }}</td>
+                                <td>
+                                    <a href="{{ url_for('editar_endereco', id=endereco[0]) }}" class="editar">Editar</a>
+
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+
+                        <h5>Envio 1<img src="assets/img/full.png" alt="raio"></h5>
+                        <div class="opcoes">
+                            <input type="radio" name="entrega" value="hoje" />
+                            <label ><span class="diferente">Chegará rápido</span> hoje</label>
+                        </div>
+                        <div class="opcoes">
+                            <input type="radio" name="entrega" value="amanha" />
+                            <label >Chegará amanhã</label>
+                        </div>
+                        <div class="opcoes">
+                            <input type="radio" name="entrega" value="preferir" />
+                            <label >No dia que preferir</label>
+                        </div>
+                </div>
+                <div class="pagamento">
+                    <h5 >Meios de Pagamento</h5>
+                    <div class="pix">
+                        <img src="assets/img/icone-pix.png" alt="icone_pix">
+                        <a href="" class="pix">PIX</a>
+
+                    </div>
+                    <div class="cartao">
+                        <img src="assets/img/icone-cartao.png" alt="icone_cartao">
+                        <a href="{{ url_for('finalizar') }}" class="cartao">Novo cartão de crédito ou pré-pago</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="finalizacao">
+            <h5>Resumos da Compra</h5>
+            <div class="preco">
+                <p>Produto</p>
+                <p>R$149,99</p>
+            </div>
+            <div class="desconto">
+                <p>Desconto do produto</p>
+                <p class="diferente">-R$110,02</p>
+            </div>
+            <div class="frete">
+                <p>Desconto do produto</p>
+                <p class="diferente">Grátis</p>
+            </div>
+            <p>_____________________________</p>
+            <div class="total">
+                <h6>Total</h6>
+                <h6>R$39,97</h6>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

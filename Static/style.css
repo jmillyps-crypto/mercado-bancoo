@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.todo{
+    margin-left: 80px;
+    display: flex;
+    flex-direction: row;
+}
+.logo{
+    background-color: #FFE600;
+    height: 55px;
+
+}
+.img-logo{
+    width: 150px;
+    margin-left: 150px;
+    margin-top: 5px;
+}
+#top{
+    width: 70px;
+}
+.produto{
+    display: flex;
+    flex-direction: row;
+}
+
+h4{
+        font-size: 28px;
+        font-weight: normal;
+        margin-top: 40px;
+        margin-bottom: 40px;
+}
+.info{
+    margin-left: 15px;
+    h5{
+        font-size: 15px;
+    }
+}
+table {
+    width: 100%;
+    margin-left: 30px auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+th {
+    background-color: #3483FA;
+    color: white;
+    padding: 7px;
+    text-align: center;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f2f2f2;
+}
+
+.editar {
+    background-color: #3483FA;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+a:hover {
+    background-color: #13173e;
+}
+
+h5{
+    font-size: 18px;
+    margin-left: 10px;
+
+}
+.juntinho{
+    border: 1px solid gray;
+    width: 800px;
+    height: 450px;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 15px;
+}
+.opcoes{
+    font-size: 17px;
+    margin-top: 35px;
+    margin-left: 10px;
+    font-weight: 300px;
+}
+.diferente{
+    color: #49d549;
+}
+.pagamento{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    width: 800px;
+    height: 200px;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 15px;
+
+}
+.pix{
+    color: black;
+    font-size: 17px;
+    padding: 10px 10px;
+    display: inline-block;
+}
+.pix:hover{
+    background-color: #f2f2f2;
+}
+.cartao{
+    color: black;
+    font-size: 17px;
+    padding: 5px 10px;
+    display: inline-block;
+}
+.cartao:hover{
+    background-color: #f2f2f2;
+}
+.finalizacao{
+    border: 1px solid gray;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 20px;
+    margin-left: 60px;
+    text-align: center;
+}
+.preco{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.desconto{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.frete{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-size: 32px;
+}

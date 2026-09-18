@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+header {
+    background-color: #ffe600;
+    padding: 10px 60px;
+}
+
+.topo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo-localizacao {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width: 180px;
+    height: auto;
+}
+
+.localizacao {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    top: 15px;
+
+}
+.enviar{
+    color: black;
+    opacity: 0.6;
+}
+
+.localizacao img {
+    width: 25px;
+    height: 25px;
+}
+
+.localizacao p {
+    margin: 0;
+    font-size: 14px;
+
+}
+
+input {
+    width: 500px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    position: relative;
+    top: -10px;
+}
+
+.conta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    left: 100px;
+    top: 56px;
+}
+
+.conta a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.conta img {
+    width: 20px;
+    height: 20px;
+}
+
+.categorias {
+    display: flex;
+    gap: 17px;
+    margin-left: 180px;
+}
+
+.categorias a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+
+
+.cabecalho {
+    background-color: #ffe600;
+    padding: 10px 60px;
+}
+
+
+
+
+.topo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+
+.logo-localizacao {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width: 180px;
+    height: auto;
+}
+
+.localizacao {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    position: relative;
+    top: 15px;
+}
+
+.localizacao img {
+    width: 25px;
+    height: 25px;
+}
+
+.localizacao p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.enviar {
+    color: black;
+    opacity: 0.6;
+}
+
+
+
+
+.busca {
+    width: 500px;
+    height: 42px;
+
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 14px;
+
+    position: relative;
+    top: -10px;
+}
+
+
+
+
+
+.conta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin-left: auto;
+}
+
+.conta a {
+    color: #333;
+    font-size: 14px;
+}
+
+.conta img {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.categorias {
+    display: flex;
+    gap: 17px;
+
+    margin-left: 180px;
+}
+
+.categorias a {
+    color: #333;
+    font-size: 14px;
+}
+
+
+
+
+.todo {
+    width: 700px;
+    margin: 40px auto;
+}
+
+.todo h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.formulario {
+    background-color: white;
+    height: 500px;
+    border-radius: 6px;
+    padding: 30px;
+    box-shadow: 0 1px 3px #ccc;
+    margin-top: 30px;
+}
+
+
+
+.formulario label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 7px;
+    font-size: 15px;
+}
+input{
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 615px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.lado {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 7px;
+    font-size: 15px;
+}
+.juntos {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.menor{
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+}
+.bnt {
+
+    width: 130px;
+    height: 42px;
+    background-color: #3483fa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+
+
+
+
+.flash_messages {
+    margin-bottom: 15px;
+}
+
+.flash {
+    padding: 10px;
+
+    border-radius: 5px;
+
+    background-color: #eee;
+}

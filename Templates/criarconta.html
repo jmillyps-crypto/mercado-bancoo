@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/estilo.css">
+    <title>Criar Conta</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="assets/img/Logo.png" alt="logo" class="img-logo">
+    </div>
+    <div class="informacoes">
+        <h4>Digite seu e-mail ou telefone <span>para iniciar sessão</span></h4>
+        <div class="container" >
+            <form class="formulario">
+
+                <label>E-mail ou telefone</label>
+                <input type="text" id="email-telefone" name="email-telefone" required>
+
+
+
+
+            </form>
+            <a href="{{ url_for('endereco') }}"><button type="submit" class="bnt">Criar Conta</button></a>
+            <p>______________________ ou ______________________</p>
+
+           <div class="outro">
+            <img src="assets/img/logo-google.png" alt="" id="logo-google">
+            <a href="" id="google">Fazer Login com o Google</a>
+
+           </div>
+
+
+        </div>
+
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicione um endereço</title>
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='logo.png') }}" >
+        <input type="text" placeholder="Buscar produtos, marcas e muito mais...">
+
+        <div>
+            <img src="{{ url_for('static', filename='pin.png') }}" >
+            <p>Enviar para</p>
+            <p>Birigui 139223320</p>
+        </div>
+        <a href="">Categorias</a>
+        <a href="">Oferta</a>
+        <a href="">Cupons</a>
+        <a href="">Supermercado</a>
+        <a href="">Moda</a>
+        <a href="">Mercado Play</a>
+        <a href="">Vender</a>
+        <a href="">Contato</a>
+    </header>
+
+    <div class="todo">
+         {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash_messages">
+                    {% for category, message in messages %}
+                        <div class="flash {{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+         {% endwith %}
+        <h4>Adicione um endereço</h4>
+        <form class="formulario" action="/adicionar_endereco" method="post">
+
+                <h5>Complete minha localização</h5>
+
+                <label>CEP</label>
+                <input type="text" id="cep" name="cep" maxlength="9" placeholder="Ex:16456-098" required >
+
+                <label>Rua/Avenida</label>
+                <input type="text" id="rua" name="rua"  placeholder="Avenida los Leones" required >
+
+                <div class="juntos">
+                    <label>Número</label>
+                    <input type="text" id="numero" name="numero"  placeholder="1234" required >
+
+                    <label>Complemento(opcional)</label>
+                    <input type="text" id="complemento" name="complemento"  placeholder="201" >
+
+                </div>
+
+                <h6>Dados de quem vai receber</h6>
+                <p>Ligaremos se houver algum problema com a entrega</p>
+
+
+                <label>Nome completo</label>
+                <input type="text" id="nome" name="nome" required >
+
+                <label>Telefone de Contato</label>
+                <input type="tel" id="telefone" name="telefone" required>
+
+                <button type="submit" class="bnt">Salvar</button>
+        </form>
+
+    </div>
+</body>
+</html>

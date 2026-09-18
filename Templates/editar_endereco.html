@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
+
+    <title>Editar endereço</title>
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='logo.png') }}" >
+        <input type="text" placeholder="Buscar produtos, marcas e muito mais...">
+
+        <div>
+            <img src="{{ url_for('static', filename='pin.png') }}" >
+            <p>Enviar para</p>
+            <p>Birigui 139223320</p>
+        </div>
+        <a href="">Categorias</a>
+        <a href="">Oferta</a>
+        <a href="">Cupons</a>
+        <a href="">Supermercado</a>
+        <a href="">Moda</a>
+        <a href="">Mercado Play</a>
+        <a href="">Vender</a>
+        <a href="">Contato</a>
+    </header>
+
+    <div class="todo">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash_messages">
+                    {% for category, message in messages %}
+                        <div class="flash {{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <h4>Editar endereço</h4>
+        <form class="formulario" action="{{ url_for('editar_endereco', id=endereco[0]) }}" method="post">
+
+            <label>CEP</label>
+            <input type="text" name="cep" value="{{ endereco[1] }}" maxlength="9" required>
+
+            <label>Rua/Avenida</label>
+            <input type="text" name="rua" value="{{ endereco[2] }}" required>
+
+            <div class="juntos">
+                <div class="lado">
+                    <label>Número</label>
+                    <input type="text" name="numero" value="{{ endereco[3] }}" required class="menor">
+                </div>
+
+                <div class="lado">
+                    <label>Complemento(opcional)</label>
+                    <input type="text" name="complemento" value="{{ endereco[4] or '' }}" class="menor">
+                </div>
+
+            </div>
+
+            <label>Nome completo</label>
+            <input type="text" name="nome" value="{{ endereco[5] }}" required>
+
+            <label>Telefone de Contato</label>
+            <input type="tel" name="telefone" value="{{ endereco[6] }}" required>
+
+            <button type="submit" class="bnt">Salvar edição</button>
+        </form>
+    </div>
+</body>
+</html>
